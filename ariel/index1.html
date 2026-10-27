@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizaê — Organização Escolar</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#inicio">✦ organiza<span>ê</span></a>
+    <p class="menu-label">MENU PRINCIPAL</p>
+    <nav>
+      <a class="nav-link active" href="#inicio">▦ Visão geral</a>
+      <a class="nav-link" href="#tarefas">✓ Minhas tarefas</a>
+      <a class="nav-link" href="#agenda">▣ Agenda</a>
+    </nav>
+    <div class="sidebar-note">
+      <strong>✦ Um passo de cada vez!</strong>
+      <p>Organize seu dia e deixe os estudos mais leves e facil.</p>
+    </div>
+    <div class="profile">
+      <div class="avatar">🎓</div>
+      <div><strong>Estudante</strong><small>Minha área escolar</small></div>
+    </div>
+  </aside>
+
+  <main id="inicio" class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow" id="todayLabel">SEU ESPAÇO DE ESTUDOS</p>
+        <h1>Olá! Vamos organizar seu dia? </h1>
+        <p class="subtitle">Tudo em um só lugar para estudar com tranquilidade.</p>
+      </div>
+      <div class="date-chip"><span id="todayDate"></span></div>
+    </header>
+
+    <section class="welcome-card">
+      <div class="welcome-copy">
+        <span class="pill">✦ SEU DIA, DO SEU JEITO</span>
+        <h2>Pequenas tarefas,<br><em>grandes conquistas.</em></h2>
+        <p>Veja o que precisa fazer e avance no seu ritmo.</p>
+        <a class="light-button" href="#tarefas">+ Adicionar tarefa</a>
+      </div>
+      <div class="welcome-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="book book-back"></div>
+        <div class="book book-front">ABC <i>✦</i></div>
+        <div class="sparkle sparkle-one">✦</div>
+        <div class="sparkle sparkle-two">✧</div>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <div class="stat-icon lilac">▤</div>
+        <div><p>Tarefas no total</p><strong id="totalCount">0</strong></div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-icon peach">◷</div>
+        <div><p>Pendentes</p><strong id="pendingCount">0</strong></div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-icon mint">✓</div>
+        <div><p>Concluídas</p><strong id="doneCount">0</strong></div>
+      </article>
+    </section>
+
+    <div class="content-grid">
+      <section class="panel" id="tarefas">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">MÃO NA MASSA</p>
+            <h2>Minhas tarefas 📝</h2>
+          </div>
+          <select id="filterTasks" aria-label="Filtrar tarefas">
+            <option value="all">Todas</option>
+            <option value="pending">Pendentes</option>
+            <option value="done">Concluídas</option>
+          </select>
+        </div>
+
+        <form id="taskForm" class="task-form">
+          <input id="taskTitle" maxlength="90" placeholder="Ex.: estudar matemática..." required>
+          <select id="taskType" aria-label="Tipo da atividade">
+            <option value="Tarefa">Tarefa</option>
+            <option value="Prova">Prova</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Compromisso">Compromisso</option>
+          </select>
+          <input id="taskDate" type="date" aria-label="Data de entrega">
+          <button type="submit" class="add-button">Adicionar +</button>
+        </form>
+
+        <div id="taskList" class="task-list"></div>
+        <p id="emptyState" class="empty-state">
+         Ainda não há tarefas por aqui. Adicione a primeira!
+        </p>
+      </section>
+
+      <aside class="right-column">
+        <section class="panel" id="agenda">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">NÃO ESQUEÇA</p>
+              <h2>Próximos prazos</h2>
+            </div>
+            <span class="calendar-icon">▦</span>
+          </div>
+          <div id="deadlineList" class="deadline-list"></div>
+        </section>
+
+        <section class="quote-card">
+          <div class="quote-icon">✦</div>
+          <p>“O segredo para começar é dividir suas tarefas grandes em pequenas tarefas.”</p>
+          <small>UM LEMBRETE PARA VOCÊ 💜</small>
+        </section>
+      </aside>
+    </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>

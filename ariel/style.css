@@ -1,0 +1,738 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff8fc;
+    color: #4a3847;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.cabecalho {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 248, 252, 0.95);
+
+    border-bottom: 1px solid #ead5e5;
+
+    backdrop-filter: blur(10px);
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #6b4863;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #b65ba0;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botao {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   INÍCIO
+========================= */
+
+.inicio {
+    min-height: 90vh;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.inicio-texto {
+    max-width: 650px;
+}
+
+.subtitulo {
+    color: #b65ba0;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.inicio h1 {
+    font-size: clamp(42px, 7vw, 75px);
+
+    line-height: 1.1;
+
+    color: #4a3847;
+
+    margin-bottom: 25px;
+}
+
+.inicio h1 span {
+    color: #b65ba0;
+}
+
+.descricao {
+    max-width: 600px;
+
+    color: #756873;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+.botao.principal {
+    background: linear-gradient(
+        135deg,
+        #b65ba0,
+        #8f5bb5
+    );
+
+    color: white;
+
+    box-shadow: 0 8px 20px rgba(143, 91, 181, 0.2);
+}
+
+.botao.principal:hover {
+    box-shadow: 0 12px 25px rgba(143, 91, 181, 0.3);
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.foto-container {
+    width: 330px;
+    height: 330px;
+
+    flex-shrink: 0;
+
+    padding: 10px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #e6a9d5,
+        #b99ad6
+    );
+
+    box-shadow: 0 15px 40px rgba(100, 70, 100, 0.15);
+}
+
+.foto-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 50%;
+
+    border: 5px solid #fff;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 100px 30px;
+
+    text-align: center;
+}
+
+.secao h2,
+.contato h2 {
+    font-size: 40px;
+
+    color: #4a3847;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre-conteudo {
+    max-width: 850px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 35px rgba(100, 70, 100, 0.08);
+}
+
+.sobre-texto {
+    text-align: left;
+}
+
+.sobre-texto p {
+    color: #756873;
+
+    margin-bottom: 18px;
+}
+
+.sobre-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.sobre-texto strong {
+    color: #a34f8e;
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.habilidades-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.habilidade {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(100, 70, 100, 0.07);
+
+    transition: 0.3s;
+}
+
+.habilidade:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(100, 70, 100, 0.12);
+}
+
+.habilidade span {
+    font-size: 38px;
+
+    display: block;
+
+    margin-bottom: 15px;
+}
+
+.habilidade h3 {
+    color: #5b4055;
+
+    margin-bottom: 10px;
+}
+
+.habilidade p {
+    color: #7b6f78;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   PROJETOS
+========================= */
+
+.projetos-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.projeto {
+    background: white;
+
+    padding: 35px;
+
+    text-align: left;
+
+    border-radius: 22px;
+
+    box-shadow: 0 10px 30px rgba(100, 70, 100, 0.07);
+
+    transition: 0.3s;
+
+    border: 1px solid #f0dfea;
+}
+
+.projeto:hover {
+    transform: translateY(-7px);
+
+    border-color: #d7a7cc;
+}
+
+.icone-projeto {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.projeto h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+
+    color: #5b4055;
+}
+
+.projeto p {
+    color: #756873;
+
+    margin-bottom: 20px;
+}
+
+.tecnologia {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #f5e4f1;
+
+    color: #9d528e;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   HOBBIES
+========================= */
+
+.cards-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(100, 70, 100, 0.07);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card span {
+    display: block;
+
+    font-size: 40px;
+
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #5b4055;
+
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #756873;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FAVORITOS
+========================= */
+
+.favoritos-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.favorito {
+    background: linear-gradient(
+        135deg,
+        #fff,
+        #f8eaf5
+    );
+
+    padding: 35px 20px;
+
+    border-radius: 25px;
+
+    border: 1px solid #ecd8e8;
+}
+
+.favorito span {
+    font-size: 40px;
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.favorito h3 {
+    color: #5b4055;
+
+    margin-bottom: 5px;
+}
+
+.favorito p {
+    color: #9b668e;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    max-width: 1100px;
+
+    margin: 40px auto 100px;
+
+    padding: 70px 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #f4d8ed,
+        #eadcf6
+    );
+
+    border-radius: 30px;
+}
+
+.contato h2 {
+    margin-bottom: 15px;
+}
+
+.contato-descricao {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #756873;
+}
+
+
+/* =========================
+   BOTÕES DE CONTATO
+========================= */
+
+.botoes-contato {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+.botoes-contato .botao {
+    min-width: 170px;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+/* WHATSAPP */
+
+.botoes-contato .whatsapp {
+    background: #25d366;
+
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+}
+
+.botoes-contato .whatsapp:hover {
+    background: #1ebe5d;
+}
+
+
+/* TELEFONE */
+
+.botoes-contato .telefone {
+    background: #8f5bb5;
+
+    box-shadow: 0 8px 20px rgba(143, 91, 181, 0.25);
+}
+
+.botoes-contato .telefone:hover {
+    background: #7b4ba0;
+}
+
+
+/* E-MAIL */
+
+.botoes-contato .email {
+    background: linear-gradient(
+        135deg,
+        #b65ba0,
+        #d889c8
+    );
+
+    box-shadow: 0 8px 20px rgba(182, 91, 160, 0.25);
+}
+
+.botoes-contato .email:hover {
+    background: linear-gradient(
+        135deg,
+        #a64d91,
+        #c777b7
+    );
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: #4a3847;
+
+    color: white;
+}
+
+.rodape p {
+    margin: 5px 0;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .inicio {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding-top: 60px;
+    }
+
+    .inicio-texto {
+        max-width: 700px;
+    }
+
+    .descricao {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foto-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .habilidades-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .menu {
+        gap: 12px 18px;
+
+        padding: 15px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .inicio {
+        min-height: auto;
+
+        padding: 70px 20px;
+    }
+
+    .inicio h1 {
+        font-size: 45px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    .foto-container {
+        width: 230px;
+        height: 230px;
+    }
+
+    .secao {
+        padding: 70px 20px;
+    }
+
+    .secao h2,
+    .contato h2 {
+        font-size: 30px;
+    }
+
+    .habilidades-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .favoritos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-conteudo {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .contato {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 50px 20px;
+    }
+
+    .botoes-contato {
+        flex-direction: column;
+    }
+
+    .botoes-contato .botao {
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+}
